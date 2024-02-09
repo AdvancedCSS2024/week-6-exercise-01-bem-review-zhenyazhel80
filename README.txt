@@ -40,7 +40,6 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </header>
 > [!NOTE]
 > block: card, element: header, modifier: title/subtitle
-
 #### Solution 2:
     <header class="card__header">
         <h2 class="card__header card__header--title">Cars</h2>
@@ -50,12 +49,11 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </header>
 > [!NOTE]
 > this solution can be correct in case class `card_header` consist of some styles that cannot be inherit and needed to be specified and are shared between all headers
-
 ## Example 2
     .card--dog {
         background-color: pink;
     }
-    
+
     .card--cat {
         background-color: yellow;
     }
@@ -76,10 +74,8 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 ## Example 5
 > [!TIP]
 > What is a purpose of section? does it make sense to call it "card"?
-
 > [!TIP]
 > There are more mistakes to fix here :)
-
     <section class="card">
         <article class="card article__dog">
             <aside class="article__dog aside">
@@ -111,7 +107,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
         max-width: 360px;
         padding: 20px;
     }
-  
+
     .card {
         background-color: white;
         margin-bottom: 20px;
@@ -141,7 +137,6 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > [!TIP]
 > Why is it not a good idea to specify type of flex applied to element in the name of class?
 
-    
 ## Example 12
     <section class="dog--flex">
         ...
@@ -196,7 +191,6 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > [!TIP]
 > Why it is not a good idea to style cards based on `nth-of-type(even)` in context of shopping cards?
 > In which context it will be a good idea?
-
     .card:nth-of-type(even) .card_basked_button {
         ...
     }
@@ -205,7 +199,6 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > [!TIP]
 > Why it is not a good idea to create repetitive styles based on id?
 > In which context we should use ids?
-
     #wishlist {
         ...
     }
@@ -218,7 +211,6 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 ## Example 22
 > [!TIP]
 > BEM stands for block__element--modifier, is "cat" and "dog" an element? 
-
     <section class="card-section__cats">
         ...
     </section>
@@ -227,7 +219,6 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > [!TIP]
 > Let's assume that in some case it make sense to call a section "cat" or "dog", the section "cat" will consist of multiple cards of cats, and the section "dog" will consist of multiple cards of dogs. Let's not focuse here on BEM. Nevertheless, how could you improve on class naming?
 > 
-
     <section class="cat">
         ...
     </section>
