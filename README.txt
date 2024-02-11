@@ -49,6 +49,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </header>
 > [!NOTE]
 > this solution can be correct in case class `card_header` consist of some styles that cannot be inherit and needed to be specified and are shared between all headers
+
 ## Example 2
     .card--dog {
         background-color: pink;
@@ -59,7 +60,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     }
 
 ## Example 3
-    .Newcard {
+    .card--new {
       border: solid 1px rgb(255, 242, 0);
       border-width: 2rem;
       max-width: 260px;
@@ -67,7 +68,7 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
       }
 
 ## Example 4
-    <p class="card__description__text">
+    <p class="card__description--text">
         Lorem ipsum dolor...
     </p>
 
@@ -76,28 +77,28 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > What is a purpose of section? does it make sense to call it "card"?
 > [!TIP]
 > There are more mistakes to fix here :)
-    <section class="card">
-        <article class="card article__dog">
-            <aside class="article__dog aside">
-                <figure class="article__dog figure">
-                    <img src="..." alt="Dummy Image" class="" />
+    <section>
+        <article class="article--dog">
+            <aside class="article__aside">
+                <figure class="article__figure">
+                    <img src="..." alt="Dummy Image" class="article__image" />
                 </figure>
              </aside>
          </article>
     </section>
 
 ## Example 6
-    .button--styled--disabled{
+    .button__styled--disabled{
         background-color: orange;
     }
 
 ## Example 7
-    <article class="card cat--card">
+    <article class="card card--cat">
       ...
     </article>
 
 ## Example 8
-    <article class="card card--dog card--dog--type1">
+    <article class="card card--dog card--type1">
       ...
     </article>
 
@@ -105,10 +106,6 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     .card {
         border: solid 1px #000;
         max-width: 360px;
-        padding: 20px;
-    }
-
-    .card {
         background-color: white;
         margin-bottom: 20px;
         padding: 15px;
@@ -118,27 +115,27 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     }
 
 ## Example 10
-    .card--dog--type1 header{
+    .card--dog-type1 header{
         background-color: green;
     }
 
-    .card--dog--type2 header{
+    .card--dog-type2 header{
         background-color: purple;
     }
 
-    .card--dog--type3 header{
+    .card--dog-type3 header{
         background-color: orange;
     }
 
 ## Example 11
-    <main class="main__flex-wrap">
+    <main class="main">
         ...
     </main>
 > [!TIP]
 > Why is it not a good idea to specify type of flex applied to element in the name of class?
 
 ## Example 12
-    <section class="dog--flex">
+    <section class="dog--type1">
         ...
     </section>
 
@@ -150,34 +147,34 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     </footer>
 
 ## Example 14
-    <header class="">
-        <h2 class="card__dog--poster">Dog Poster</h2>
-        <h3 class="">Dog poster - 50nok</h3>
+    <header class="card__header">
+        <h2 class="card__title">Dog Poster</h2>
+        <h3 class="card__price">Dog poster - 50nok</h3>
     </header>
 
 ## Example 15
     <header class="card__header">
-        <h2 class="card__title--cat">NEW! Cat Poster</h2>
-        <h3 class="card__subtitle">Cat poster - 50nok</h3>
+        <h2 class="card__title">NEW! Cat Poster</h2>
+        <h3 class="card__price">Cat poster - 50nok</h3>
     </header>
 
 ## Example 16
-    <section class="catbox">
+    <section class="card__section">
         ...
     </section>
 
 ## Example 17
-    <button class="card_basked_button styled disabled">
-        <span class="card_basket_button_icon">&#128722;</span>
-        <span class="card_basket_button_text">Basket</span>
-    </button>
+<button class="card-basket__button card-basket__button--styled card-basket__button--disabled">
+    <span class="card-basket__button-icon">&#128722;</span>
+    <span class="card-basket__button-text">Basket</span>
+</button>
 
 ## Example 18
-    <header class="main_header">
+    <header class="main__header">
         <h1>BEM</h1>
-        <button class="styled disabled wishlist">
-            <span>🚀</span>
-            <span>Wish list</span>
+        <button class="main__button main__button--styled main__button--disabled">
+            <span class="main__button-icon">🚀</span>
+            <span class="main__button--text">Wishlist</span>
         </button>
     </header>
     </header>
@@ -204,14 +201,14 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
     }
 
 ## Example 21
-    <main class="main_flex-container">
+    <main class="main__container">
         ...
     </main>
 
 ## Example 22
 > [!TIP]
 > BEM stands for block__element--modifier, is "cat" and "dog" an element? 
-    <section class="card-section__cats">
+    <section class="card-section card-section--cat">
         ...
     </section>
 
@@ -219,13 +216,13 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
 > [!TIP]
 > Let's assume that in some case it make sense to call a section "cat" or "dog", the section "cat" will consist of multiple cards of cats, and the section "dog" will consist of multiple cards of dogs. Let's not focuse here on BEM. Nevertheless, how could you improve on class naming?
 > 
-    <section class="cat">
+    <section class="card-container card-container--cats">
         ...
     </section>
 
 ## Example 24
-    .button__div1,
-    .button__div2 {
+.button__icon-container,
+.button__text-container {
         display: flex;
         flex-direction: row-reverse;
     }
@@ -239,16 +236,16 @@ In addition to the above BEM exercise, in your group, practice Git collaboration
       ...
     }
 
-    header>button {
+    header__button {
       border: none;
       ...
     }
 
-    header>button:hover {
+    header__button--hover {
        background-color: hsl(180, 25%, 73%);
     }
 
-    header>button:active {
+    header__button--active {
       background-color: hsl(180, 29%, 50%);
     }
 
